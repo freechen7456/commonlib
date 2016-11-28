@@ -1,0 +1,181 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{C8DC8D71-8F5F-430D-AA56-05B37123C79F}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>org.apache.commons.cli</RootNamespace>
+    <AssemblyName>common-cli-1.3.1-unittest</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+    <ReferencePath>$(ProgramFiles)\Common Files\microsoft shared\VSTT\$(VisualStudioVersion)\UITestExtensionPackages</ReferencePath>
+    <IsCodedUITest>False</IsCodedUITest>
+    <TestProjectType>UnitTest</TestProjectType>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+  </ItemGroup>
+  <Choose>
+    <When Condition="('$(VisualStudioVersion)' == '10.0' or '$(VisualStudioVersion)' == '') and '$(TargetFrameworkVersion)' == 'v3.5'">
+      <ItemGroup>
+        <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework, Version=10.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+      </ItemGroup>
+    </When>
+    <Otherwise>
+      <ItemGroup>
+        <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework" />
+      </ItemGroup>
+    </Otherwise>
+  </Choose>
+  <ItemGroup>
+    <Compile Include="..\common-cli-1.3.1\AlreadySelectedException.cs">
+      <Link>src\AlreadySelectedException.cs</Link>
+    </Compile>
+    <Compile Include="..\common-cli-1.3.1\AmbiguousOptionException.cs">
+      <Link>src\AmbiguousOptionException.cs</Link>
+    </Compile>
+    <Compile Include="..\common-cli-1.3.1\BasicParser.cs">
+      <Link>src\BasicParser.cs</Link>
+    </Compile>
+    <Compile Include="..\common-cli-1.3.1\CommandLine.cs">
+      <Link>src\CommandLine.cs</Link>
+    </Compile>
+    <Compile Include="..\common-cli-1.3.1\CommandLineParser.cs">
+      <Link>src\CommandLineParser.cs</Link>
+    </Compile>
+    <Compile Include="..\common-cli-1.3.1\DefaultParser.cs">
+      <Link>src\DefaultParser.cs</Link>
+    </Compile>
+    <Compile Include="..\common-cli-1.3.1\ExtensionMethod.cs">
+      <Link>src\ExtensionMethod.cs</Link>
+    </Compile>
+    <Compile Include="..\common-cli-1.3.1\GnuParser.cs">
+      <Link>src\GnuParser.cs</Link>
+    </Compile>
+    <Compile Include="..\common-cli-1.3.1\HelpFormatter.cs">
+      <Link>src\HelpFormatter.cs</Link>
+    </Compile>
+    <Compile Include="..\common-cli-1.3.1\MissingArgumentException.cs">
+      <Link>src\MissingArgumentException.cs</Link>
+    </Compile>
+    <Compile Include="..\common-cli-1.3.1\MissingOptionException.cs">
+      <Link>src\MissingOptionException.cs</Link>
+    </Compile>
+    <Compile Include="..\common-cli-1.3.1\Option.cs">
+      <Link>src\Option.cs</Link>
+    </Compile>
+    <Compile Include="..\common-cli-1.3.1\OptionBuilder.cs">
+      <Link>src\OptionBuilder.cs</Link>
+    </Compile>
+    <Compile Include="..\common-cli-1.3.1\OptionGroup.cs">
+      <Link>src\OptionGroup.cs</Link>
+    </Compile>
+    <Compile Include="..\common-cli-1.3.1\Options.cs">
+      <Link>src\Options.cs</Link>
+    </Compile>
+    <Compile Include="..\common-cli-1.3.1\OptionValidator.cs">
+      <Link>src\OptionValidator.cs</Link>
+    </Compile>
+    <Compile Include="..\common-cli-1.3.1\ParseException.cs">
+      <Link>src\ParseException.cs</Link>
+    </Compile>
+    <Compile Include="..\common-cli-1.3.1\Parser.cs">
+      <Link>src\Parser.cs</Link>
+    </Compile>
+    <Compile Include="..\common-cli-1.3.1\PatternOptionBuilder.cs">
+      <Link>src\PatternOptionBuilder.cs</Link>
+    </Compile>
+    <Compile Include="..\common-cli-1.3.1\PosixParser.cs">
+      <Link>src\PosixParser.cs</Link>
+    </Compile>
+    <Compile Include="..\common-cli-1.3.1\TypeHandler.cs">
+      <Link>src\TypeHandler.cs</Link>
+    </Compile>
+    <Compile Include="..\common-cli-1.3.1\UnrecognizedOptionException.cs">
+      <Link>src\UnrecognizedOptionException.cs</Link>
+    </Compile>
+    <Compile Include="..\common-cli-1.3.1\Util.cs">
+      <Link>src\Util.cs</Link>
+    </Compile>
+    <Compile Include="test\ApplicationTest.cs" />
+    <Compile Include="test\ArgumentIsOptionTest.cs" />
+    <Compile Include="test\BasicParserTest.cs" />
+    <Compile Include="test\bug\BugCLI133Test.cs" />
+    <Compile Include="test\bug\BugCLI13Test.cs" />
+    <Compile Include="test\bug\BugCLI148Test.cs" />
+    <Compile Include="test\bug\BugCLI162Test.cs" />
+    <Compile Include="test\bug\BugCLI18Test.cs" />
+    <Compile Include="test\bug\BugCLI252Test.cs" />
+    <Compile Include="test\bug\BugCLI71Test.cs" />
+    <Compile Include="test\bug\BugsTest.cs" />
+    <Compile Include="test\CommandLineTest.cs" />
+    <Compile Include="test\DefaultParserTest.cs" />
+    <Compile Include="test\GnuParserTest.cs" />
+    <Compile Include="test\HelpFormatterTest.cs" />
+    <Compile Include="test\OptionBuilderTest.cs" />
+    <Compile Include="test\OptionGroupTest.cs" />
+    <Compile Include="test\OptionsTest.cs" />
+    <Compile Include="test\OptionTest.cs" />
+    <Compile Include="test\ParserTestCase.cs" />
+    <Compile Include="test\PatternOptionBuilderTest.cs" />
+    <Compile Include="test\PosixParserTest.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="test\UtilTest.cs" />
+    <Compile Include="test\ValuesTest.cs" />
+    <Compile Include="test\ValueTest.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <Choose>
+    <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">
+      <ItemGroup>
+        <Reference Include="Microsoft.VisualStudio.QualityTools.CodedUITestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+          <Private>False</Private>
+        </Reference>
+        <Reference Include="Microsoft.VisualStudio.TestTools.UITest.Common, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+          <Private>False</Private>
+        </Reference>
+        <Reference Include="Microsoft.VisualStudio.TestTools.UITest.Extension, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+          <Private>False</Private>
+        </Reference>
+        <Reference Include="Microsoft.VisualStudio.TestTools.UITesting, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+          <Private>False</Private>
+        </Reference>
+      </ItemGroup>
+    </When>
+  </Choose>
+  <Import Project="$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets" Condition="Exists('$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets')" />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
